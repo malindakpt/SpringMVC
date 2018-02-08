@@ -1,0 +1,26 @@
+
+ <button class="w3-button w3-red btn-right" onclick="save()">Add Batch</button>
+
+// Class definition
+@javax.persistence.Entity
+@Table(name = "student", catalog = "school", uniqueConstraints = {
+@UniqueConstraint(columnNames = "studentId")})
+
+// Id column
+@Id
+@GeneratedValue(strategy = GenerationType.AUTO)
+@Column(name = "studentId", unique = true, nullable = false)
+public int getStudentId() {
+   return studentId;
+}
+
+// 1 to many
+@OneToMany(fetch = FetchType.EAGER, mappedBy = "student")
+
+// Many to 1
+@ManyToOne(fetch = FetchType.EAGER)
+@JoinColumn(name = "classRoomId", nullable = true)
+
+ // Many to Many
+@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+@JoinTable(name = "subject_teacher", joinColumns = { @JoinColumn(name = "subjectId") }, inverseJoinColumns = { @JoinColumn(name = "teacherId") })

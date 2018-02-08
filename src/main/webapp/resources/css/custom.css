@@ -1,0 +1,50 @@
+.widget-header{
+    color: white!important;
+    background: #4d636f;
+}
+
+.widget-header2{
+    color: white!important;
+    background: #77909e;
+}
+
+.btn-right{
+    float: right;
+    margin: 20px;
+}
+
+.button-ok{
+    margin:3px;
+}
+
+
+.checked {
+    color: orange;
+}
+
+.wid-id {
+    font-size: 10px;
+}
+
+.inputSubjectList{
+    width: 25%;
+    float: left;
+    margin-bottom: 46px;
+}
+
+.my-select-analize{
+    max-width: 30%;
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 17px;
+}
+
+.allocateSubject{
+    width: 33%;
+    float: left;
+}
+
+
+th{
+    min-width: 108px;
+}
